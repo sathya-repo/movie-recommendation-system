@@ -12,7 +12,7 @@ st.markdown("Find movies similar to your favorites using TF-IDF and cosine simil
 #  Load Data and Model (Cached)
 @st.cache_data(show_spinner=True)
 def load_data_and_model():
-    df = pd.read_csv("C:/Users/WIN 10/Desktop/Sathya/movierecom/ml-latest-small/movies.csv")
+    df = pd.read_csv("movies.csv")
 
     # Automatically detect the text column
     possible_cols = ["overview", "description", "tags", "genres"]
@@ -89,5 +89,6 @@ if st.button("Recommend"):
 #  Footer
 st.markdown("---")
 st.caption("Built with Streamlit & scikit-learn")
+
 
 
